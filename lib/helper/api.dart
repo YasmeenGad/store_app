@@ -7,10 +7,8 @@ class Api {
   Future<http.Response> get(
       {required String url, @required String? token}) async {
     Map<String, String> headers = {};
-    if (token != null) {
-      headers.addAll({'Authorization': 'Bearer $token'});
-    }
-    http.Response response = await http.get(Uri.parse(url), headers: headers);
+
+    http.Response response = await http.get(Uri.parse(url));
     if (response.statusCode == 200) {
       return response;
     } else {

@@ -17,7 +17,7 @@ class ProductModel {
   ProductModel.fromJson(json) {
     id = json['id'];
     title = json['title'];
-    price = json['price'];
+    price = json['price'].toDouble();
     description = json['description'];
     image = json['image'];
     rating = RatingModel.fromJson(json['rating']);
@@ -31,7 +31,7 @@ class RatingModel {
   RatingModel({this.rate, this.count});
 
   RatingModel.fromJson(json) {
-    rate = json['rate'];
+    rate = json['rate'].toDouble();
     count = json['count'];
   }
 }

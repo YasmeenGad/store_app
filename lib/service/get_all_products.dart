@@ -12,7 +12,9 @@ class AllProductsService {
     List<dynamic> data = jsonDecode(response.body);
     List<ProductModel> productsList = [];
     for (int i = 0; i < data.length; i++) {
-      productsList.add(data[i]);
+      ProductModel product = ProductModel.fromJson(data[i]);
+      productsList.add(product);
+      // productsList.add(data[i]);
     }
     return productsList;
   }
