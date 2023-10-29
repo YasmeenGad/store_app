@@ -4,6 +4,7 @@ class ProductModel {
   double? price;
   String? description;
   String? image;
+  String? caregory;
   RatingModel? rating;
 
   ProductModel(
@@ -12,15 +13,18 @@ class ProductModel {
       this.price,
       this.description,
       this.image,
-      this.rating});
+      this.rating,
+      this.caregory});
 
   ProductModel.fromJson(json) {
     id = json['id'];
+    caregory = json['caregory'];
     title = json['title'];
     price = json['price'].toDouble();
     description = json['description'];
     image = json['image'];
-    rating = RatingModel.fromJson(json['rating']);
+    rating =
+        json['rating'] == null ? null : RatingModel.fromJson(json['rating']);
   }
 }
 

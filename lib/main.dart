@@ -20,7 +20,7 @@ class StoreApp extends StatelessWidget {
       builder: (context, child) {
         return GetMaterialApp(
           debugShowCheckedModeBanner: false,
-          initialRoute: Home.routeName,
+          initialRoute: UpdateProduct.routeName,
           getPages: [
             GetPage(name: Home.routeName, page: () => Home()),
             GetPage(name: UpdateProduct.routeName, page: () => UpdateProduct()),

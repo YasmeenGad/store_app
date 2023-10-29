@@ -35,6 +35,7 @@ dependencies:
   get: ^4.6.6
   http: ^1.1.0
   font_awesome_flutter: ^10.6.0
+  modal_progress_hud_nsn: ^0.4.0
 
 dev_dependencies:
   flutter_lints: ^2.0.0

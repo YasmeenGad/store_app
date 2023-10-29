@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:store_app/models/product_model.dart';
+import 'package:store_app/screens/update_product.dart';
 
 class CustomCard extends StatelessWidget {
   CustomCard({required this.product});
@@ -11,7 +12,10 @@ class CustomCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        Navigator.pushNamed(context, UpdateProduct.routeName,
+            arguments: product);
+      },
       child: Stack(
         clipBehavior: Clip.none,
         children: [
